@@ -1,7 +1,7 @@
 # rob314_TP2
 
 ## usage 
-package a cloner dans le dossier source le catkin workspace (habituellement appelé ~/catkin_ws/src)
+package a cloner dans le dossier source du catkin workspace (habituellement appelé ~/catkin_ws/src)
 
 puis executer les commandes :
 
