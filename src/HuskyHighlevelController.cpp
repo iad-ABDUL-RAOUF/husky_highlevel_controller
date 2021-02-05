@@ -43,7 +43,7 @@ void HuskyHighlevelController::scanCallback(const sensor_msgs::LaserScan& messag
       minVal = std::min(minVal, message.ranges[i]);
     }
   }
-  ROS_INFO_STREAM("min measured range is : " << minVal << std::endl);
+  ROS_INFO_STREAM("min measured range is : " << minVal);
 }
 
 } /* namespace */
