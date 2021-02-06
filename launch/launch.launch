@@ -15,13 +15,15 @@ launch qui lance par defaut une simu gazebo avec un husky et dont le laser est a
   <!--
   <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/>
   -->
-  <!--
-   <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" launch-prefix="gnome-terminal -command"/>
+  
+   <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" launch-prefix="gnome-terminal --command"/>
+   <!--
    ajouter un deuxieme tiret devant command
   -->
   <node name="husky_high" pkg="husky_highlevel_controller" type="husky_highlevel_controller_node" output="screen">
     <param name="scan_topic_name" type="str" value="/scan" />
     <param name="scan_topic_queue_size" type="int" value="10" />
+    <param name="controller_proportional_gain" type="double" value="0.5" />
   </node>
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find husky_highlevel_controller)/config/test_rviz_params.rviz" output="screen"/>
