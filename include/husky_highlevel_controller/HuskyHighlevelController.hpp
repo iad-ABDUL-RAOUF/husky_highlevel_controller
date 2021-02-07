@@ -4,6 +4,7 @@
 #include <sensor_msgs/LaserScan.h>
 #include <geometry_msgs/Twist.h>
 #include <visualization_msgs/Marker.h>
+#include <tf2_ros/transform_listener.h>
 #include <cmath>
 
 namespace husky_highlevel_controller {
@@ -41,6 +42,9 @@ private:
 	//! ROS topic publisher
 	ros::Publisher commandPublisher_;
 	ros::Publisher visPub_;
+	//! tf
+	tf2_ros::Buffer tfBuffer_;
+  tf2_ros::TransformListener tfListener_(tf2_ros::Buffer tfBuffer_);
 	//! gain proportionnel du controlleur
 	float Kp_;
   //! ROS topic name to subscribe to.
