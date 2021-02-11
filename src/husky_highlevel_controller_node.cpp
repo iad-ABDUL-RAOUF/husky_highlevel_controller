@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "husky_highlevel_controller");
   ros::NodeHandle nodeHandle("~");
-
+  //tf2_ros::Buffer tfBuffer;
   husky_highlevel_controller::HuskyHighlevelController huskyHighlevelController(nodeHandle);
 
   ros::spin();
